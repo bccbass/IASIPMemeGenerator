@@ -24,7 +24,4 @@ const getQuote = async () => {
     imgWrapper.classList.remove('fade-out')    
     }
 
-
-
-
 btn.addEventListener('click', getQuote)

@@ -49,19 +49,13 @@ button:hover {
     margin: 0 .3rem
 }
 
-
-
 #quote-wrapper {
     color: rgb(56, 56, 56);
     border-radius: .3rem;
-
-    /* background-color: rgba(255, 255, 255, 0.747); */
-    /* margin: 1rem;
-    margin-bottom: 3rem; */
     position: fixed;
     top: 20%;
     padding: 0;
-    max-width: 700px;
+    max-width: 550px;
 }
 #quote {
     font-weight: 100;
@@ -116,17 +110,20 @@ transition: 2s;
     box-shadow: 2px 2px 5px rgb(151, 151, 151);
     position: fixed;
     top: 2rem;
+    border-radius: 1rem;
 }
 
 
 @media (max-width: 900px) {
     main {
+        position: fixed;
         border-radius: 0;
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
         margin: 0;
-        top: 0
-
+        top: 0;
+        left: 0;
+        border: 0;
     }    
     .img-wrapper img {
     transform: translate(-50%, -10%);
@@ -170,6 +167,6 @@ transition: 2s;
     .img-wrapper img {
     transform: translate(-50%, 18%);
 
-        /* height: 80vh; */
+        height: 80vh;
     }
 }
