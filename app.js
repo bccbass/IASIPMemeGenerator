@@ -22,7 +22,6 @@ const getQuote = async () => {
     const who =  quoteRes.sqWho.split(' ')[0]
     characters[who] ? img.src = characters[who] : img.src = './media/theGang.png'
     imgWrapper.classList.remove('fade-out')    
-    imgWrapper.classList.add('fade-in')    
     }
 
 
