@@ -1,7 +1,5 @@
-# JavaScript ToDo List
+# It's Always Sunny in Philadelphia Meme Generator
 
+![screenshot](./SunnyScreenshot.jpg)
 
-
-
-Set up a CORS proxy to use with API:
-https://stackoverflow.com/questions/43262121/trying-to-use-fetch-and-pass-in-mode-no-cors
+Click the characters to show a random quote along with a cartoon of who said it. Created as an excercise to practice async/await and working with API's.
