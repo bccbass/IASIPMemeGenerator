@@ -15,7 +15,7 @@ const characters = {
 const corsProxy = 'https://cors-anywhere.herokuapp.com/'
 const getQuote = async () => {
     imgWrapper.classList.add('fade-out')    
-    const res = await fetch(corsProxy + 'http://sunnyquotes.net/q.php?random')
+    const res = await fetch('http://sunnyquotes.net/q.php?random')
      const quoteRes = await res.json()
     quote.innerHTML = `"${quoteRes.sqQuote}"`
     author.innerHTML = '- ' + quoteRes.sqWho
