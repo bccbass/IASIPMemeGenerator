@@ -119,8 +119,8 @@ transition: 2s;
     main {
         position: fixed;
         border-radius: 0;
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
         margin: 0;
         top: 0;
         left: 0;
@@ -158,7 +158,7 @@ transition: 2s;
 }
 @media (max-width: 480px) {
     .img-wrapper img {
-    transform: translate(-50%, -10%);
+    transform: translate(-50%, -5%);
     height: auto;
     max-width: 100vw;
 
@@ -166,8 +166,8 @@ transition: 2s;
 }
 @media (max-width: 380px) {
     .img-wrapper img {
-    transform: translate(-50%, 18%);
-
-        height: 80vh;
+    transform: translate(-50%, 5%);
+        /* max-width: ;
+        height: 80vh; */
     }
 }
