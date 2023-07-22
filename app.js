@@ -23,7 +23,6 @@ const getQuote = async () => {
     characters[who] ? img.src = characters[who] : img.src = './media/theGang.png'
     imgWrapper.classList.remove('fade-out')    
     imgWrapper.classList.add('fade-in')    
-
     }
 
 
