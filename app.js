@@ -12,7 +12,7 @@ const characters = {
     Mac: './media/Mac.png',
 }
 
-const corsProxy = 'https://cors-anywhere.herokuapp.com/'
+const corsProxy = 'https://cors-proxy-awesome-105b58c47564.herokuapp.com/'
 const getQuote = async () => {
     imgWrapper.classList.add('fade-out')    
     const res = await fetch(corsProxy + 'https://sunnyquotes.net/q.php?random')
