@@ -20,7 +20,7 @@ const getQuote = async () => {
     quote.innerHTML = `"${quoteRes.sqQuote}"`
     author.innerHTML = '- ' + quoteRes.sqWho
     const who =  quoteRes.sqWho.split(' ')[0]
-    characters[who] ? img.src = characters[who] : img.src = './media/theGang.png'
+    characters[who] ? img.src = characters[who] : getQuote()
     imgWrapper.classList.remove('fade-out')    
     }
 

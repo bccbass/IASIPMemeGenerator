@@ -4,7 +4,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background-image: url('https://images.unsplash.com/photo-1553526777-5ffa3b3248d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA'); */
     background-image: url(./media/paddys.jpeg);
     background-size: cover;
     background-position: center;
@@ -50,7 +49,8 @@ button:hover {
 }
 
 #quote-wrapper {
-    color: rgb(56, 56, 56);
+    z-index: 5;
+    color: rgb(78, 78, 78);
     border-radius: .3rem;
     position: fixed;
     top: 20%;
@@ -62,12 +62,12 @@ button:hover {
     font-weight: 100;
     padding: 1rem;
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 #author {
     width: 60%;
     font-style: italic;
-    margin: .5rem 10rem 1rem;
+    margin: 0 9em 1rem;
     text-align: right;
 }
 
@@ -94,7 +94,6 @@ transition: 2s;
     position: fixed;
     left: 50%;
     transform: translate(-50%, -20%);
-    /* transition: fadeAnimation 200ms ease-in-out; */
     animation-duration: 2000ms;
     animation-name: fadeAnimation;
 }
