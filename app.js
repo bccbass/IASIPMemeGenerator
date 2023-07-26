@@ -1,27 +1,44 @@
-const btn = document.querySelector('.img-wrapper')
 const quote = document.querySelector('#quote')
 const author = document.querySelector('#author')
-const img = document.querySelector('img')
-const imgWrapper = document.querySelector('.img-wrapper')
+const characters = document.querySelectorAll('.img-wrapper')
+const imgWrapper = document.querySelector('.img-container')
 
-const characters = {
-    Charlie: './media/Charlie.png',
-    Dennis: './media/Dennis.png',
-    Frank: './media/Frank.png',
-    Dee: './media/Dee.png',
-    Mac: './media/Mac.png',
+
+
+const charactersCache = {
+    Charlie: charlie,
+    Dennis: dennis,
+    Frank: frank,
+    Dee: dee,
+    Mac: mac
+}
+
+const sendToBackground = () => {
+    for (let character of characters){
+        character.classList.add('background-character')
+    }
+} 
+
+const sendToForeground = character => {
+    sendToBackground()
+    character.classList.add('fade-in')
+    character.classList.remove('background-character')
 }
 
 const corsProxy = 'https://cors-proxy-awesome-105b58c47564.herokuapp.com/'
+
 const getQuote = async () => {
-    imgWrapper.classList.add('fade-out')    
     const res = await fetch(corsProxy + 'https://sunnyquotes.net/q.php?random')
-     const quoteRes = await res.json()
+    const quoteRes = await res.json()
     quote.innerHTML = `"${quoteRes.sqQuote}"`
     author.innerHTML = '- ' + quoteRes.sqWho
     const who =  quoteRes.sqWho.split(' ')[0]
-    characters[who] ? img.src = characters[who] : getQuote()
-    imgWrapper.classList.remove('fade-out')    
+    charactersCache[who] ? sendToForeground(charactersCache[who]) : getQuote()
     }
 
-btn.addEventListener('click', getQuote)
+
+for (let character of characters){
+    character.addEventListener('click', getQuote)
+}
+
+
