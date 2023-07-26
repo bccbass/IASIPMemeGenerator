@@ -45,13 +45,13 @@ main {
   font-weight: 100;
   padding: 1rem;
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 1.32rem;
 }
 
 #author {
-  width: 60%;
+  width: 82%;
   font-style: italic;
-  margin: 0 9em 1rem;
+  margin: -.6rem 0rem 0rem 5rem;
   text-align: right;
 }
 
@@ -70,7 +70,7 @@ main {
     margin-top: 15rem;
     display: flex;
     justify-content: space-around;
-     width: 45vw;
+     width: 75%;
      align-items: flex-end;
 }
 

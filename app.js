@@ -30,10 +30,15 @@ const corsProxy = 'https://cors-proxy-awesome-105b58c47564.herokuapp.com/'
 const getQuote = async () => {
     const res = await fetch(corsProxy + 'https://sunnyquotes.net/q.php?random')
     const quoteRes = await res.json()
-    quote.innerHTML = `"${quoteRes.sqQuote}"`
-    author.innerHTML = '- ' + quoteRes.sqWho
     const who =  quoteRes.sqWho.split(' ')[0]
-    charactersCache[who] ? sendToForeground(charactersCache[who]) : getQuote()
+    if (charactersCache[who]) {
+        quote.innerHTML = `"${quoteRes.sqQuote}"`
+        author.innerHTML = '- ' + quoteRes.sqWho
+        sendToForeground(charactersCache[who])
+        } 
+    else {
+        getQuote()
+    }
     }
 
 
